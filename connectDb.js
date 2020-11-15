@@ -15,15 +15,16 @@ db.once('open',function(){
 })
 
 // 完整的schema
-let listingsAndReviews = mongoose.Schema({
-    name:String,
-    summary:String
-})
+let listin = mongoose.Schema()
+// let id ="10006546"
+// let objectId = mongoose.Schema.Types.ObjectId(id)
+// console.log(objectId)
 
-let listingsAndReview = mongoose.model('listingsAndReviews',listingsAndReviews)
-listingsAndReview.find((err,bnb)=>{
+let listingsAndReview = mongoose.model('listingsAndReviews',listin,"listingsAndReviews")
+listingsAndReview.find({beds:2},(err,bnb)=>{
     if(err){
         console.log(err)
+        db.close()
     }
     else{
         console.log(bnb)
