@@ -14,7 +14,7 @@ db.once('open',function(){
     console.log("connection true")
 })
 
-// 完整的schema
+// 完整的schema  _id应该是objectid
 let listin = mongoose.Schema()
 // let id ="10006546"
 // let objectId = mongoose.Schema.Types.ObjectId(id)

@@ -31,7 +31,7 @@ let user_info  = mongoose.model("user_info",baidu_api,"user_info")  //不小心�
     
 // })
 
-user_info.find({work_id:"201710215"},(err,data)=>{
+user_info.find((err,data)=>{       // 找所有docm
     if(err){
         console.log(err)
         db.close()
